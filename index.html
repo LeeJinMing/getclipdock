@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="ClipDock — a visual clipboard for people who live in screenshots. Capture, annotate, organize, and search locally." />
+  <title>ClipDock — Visual Clipboard for Screenshots</title>
+  <style>
+    :root{
+      --bg:#0b0f19;
+      --panel:rgba(255,255,255,.06);
+      --border:rgba(255,255,255,.10);
+      --text:#e9eef8;
+      --muted:rgba(233,238,248,.72);
+      --muted2:rgba(233,238,248,.56);
+      --brand:#7c3aed;
+      --brand2:#bda6ff;
+      --ok:#22c55e;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background:radial-gradient(1200px 600px at 20% -20%, rgba(124,58,237,.35), transparent 60%),
+                 radial-gradient(900px 500px at 100% 0%, rgba(189,166,255,.18), transparent 55%),
+                 var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:1040px;margin:0 auto;padding:28px 18px 54px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px}
+    .logo{
+      width:34px;height:34px;border-radius:10px;
+      background:linear-gradient(135deg, rgba(124,58,237,.95), rgba(189,166,255,.70));
+      box-shadow:0 10px 30px rgba(124,58,237,.22);
+      border:1px solid rgba(255,255,255,.14);
+    }
+    .nav{display:flex;gap:16px;align-items:center;color:var(--muted);font-size:14px}
+    .nav a{opacity:.9;text-decoration:none}
+    .nav a:hover{opacity:1;text-decoration:underline}
+
+    .hero{margin-top:34px;display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:start}
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+    }
+    h1{margin:0 0 10px;font-size:44px;line-height:1.1;letter-spacing:-.6px}
+    .sub{margin:0;color:var(--muted);font-size:17px}
+    .sub2{margin:10px 0 0;color:var(--muted2);font-size:15px}
+    .ctaRow{display:flex;gap:12px;align-items:center;margin-top:18px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 14px;border-radius:12px;border:1px solid var(--border);
+      background:rgba(255,255,255,.06);
+      color:var(--text);text-decoration:none;font-weight:600;
+    }
+    .btnPrimary{
+      background:linear-gradient(135deg, rgba(124,58,237,.95), rgba(189,166,255,.70));
+      border-color:rgba(255,255,255,.18);
+      box-shadow:0 16px 42px rgba(124,58,237,.22);
+    }
+    .btn:hover{filter:brightness(1.06)}
+    .fine{margin-top:10px;color:var(--muted2);font-size:13px}
+
+    .panel{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:16px;
+    }
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 12px;border-radius:999px;
+      background:linear-gradient(135deg, rgba(124,58,237,.32), rgba(234,211,154,.18));
+      border:1px solid rgba(124,58,237,.40);
+      color:rgba(245,241,230,.95);
+      font-weight:650;
+      box-shadow:0 12px 26px rgba(0,0,0,.20);
+    }
+    .grid4{margin-top:18px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media (max-width: 700px){
+      .grid4{grid-template-columns:1fr}
+    }
+    .cardTitle{display:flex;align-items:center;gap:10px;font-weight:700}
+    .ico{
+      width:28px;height:28px;border-radius:10px;
+      display:inline-flex;align-items:center;justify-content:center;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .bul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:14px}
+    .bul li{margin:6px 0}
+
+    .section{margin-top:28px}
+    .section h2{margin:0 0 12px;font-size:18px;letter-spacing:-.2px}
+    .demoGrid{display:grid;grid-template-columns:1fr;gap:12px}
+    .placeholder{
+      border-radius:14px;border:1px dashed rgba(255,255,255,.18);
+      background:rgba(255,255,255,.03);
+      padding:14px;color:var(--muted2);font-size:14px
+    }
+
+    .pricing{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    .price{font-size:22px;font-weight:800}
+    .note{color:var(--muted);font-size:14px}
+    .footer{margin-top:34px;padding-top:18px;border-top:1px solid rgba(255,255,255,.10);color:var(--muted2);font-size:13px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>ClipDock</div>
+      </div>
+      <div class="nav">
+        <a href="#features">Features</a>
+        <a href="#demo">Demo</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#waitlist">Waitlist</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div>
+        <h1>A visual clipboard for people who live in screenshots.</h1>
+        <p class="sub">Capture → annotate → organize → search. Locally.</p>
+        <p class="sub2">Privacy-first. No subscription. Consistent, studio-quality exports.</p>
+
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="#waitlist">Join the waitlist</a>
+          <a class="btn" href="#demo">See 15‑sec demo</a>
+        </div>
+        <div class="fine">Windows 10/11 MVP. Coming soon on Microsoft Store.</div>
+      </div>
+
+      <div class="panel">
+        <div class="badge">★ Pro (Lifetime)</div>
+        <div style="margin-top:12px;color:var(--muted);font-size:14px">
+          Built for fast, predictable workflows — no “prompt tinkering”, no cloud lock-in.
+        </div>
+        <div class="grid4" style="margin-top:14px">
+          <div class="panel" style="padding:12px">
+            <div class="cardTitle"><span class="ico">🔒</span>Data &amp; Privacy</div>
+            <ul class="bul">
+              <li>Own your data (local-first)</li>
+              <li>Backup via OneDrive / WebDAV</li>
+            </ul>
+          </div>
+          <div class="panel" style="padding:12px">
+            <div class="cardTitle"><span class="ico">🧠</span>Visual Memory</div>
+            <ul class="bul">
+              <li>Offline OCR (runs locally)</li>
+              <li>Search text inside screenshots</li>
+            </ul>
+          </div>
+          <div class="panel" style="padding:12px">
+            <div class="cardTitle"><span class="ico">⚡</span>Productivity</div>
+            <ul class="bul">
+              <li>Floating windows</li>
+              <li>Fast shortcuts &amp; workflow</li>
+            </ul>
+          </div>
+          <div class="panel" style="padding:12px">
+            <div class="cardTitle"><span class="ico">✨</span>Export Polish</div>
+            <ul class="bul">
+              <li>Auto-padding, shadow, rounded corners</li>
+              <li>Presets &amp; zip export</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="features" class="section">
+      <h2>Why ClipDock</h2>
+      <div class="panel">
+        <div style="color:var(--muted);font-size:14px">
+          ClipDock is designed for “screenshot-heavy” work: product specs, bug reports, UI references, research notes, and client feedback.
+          It keeps your library local by default, with optional OneDrive/WebDAV backup — so you stay in control.
+        </div>
+      </div>
+    </div>
+
+    <div id="demo" class="section">
+      <h2>15‑sec demos (add GIFs here)</h2>
+      <div class="demoGrid">
+        <div class="placeholder">Demo #1: Paste to workbench (Ctrl+V) → organize instantly. (Replace with a GIF)</div>
+        <div class="placeholder">Demo #2: Search inside screenshots (OCR) → jump to matches. (Replace with a GIF)</div>
+        <div class="placeholder">Demo #3: Beautify export → consistent aesthetics for docs. (Replace with a GIF)</div>
+      </div>
+    </div>
+
+    <div id="pricing" class="section">
+      <h2>Pricing</h2>
+      <div class="panel pricing">
+        <div>
+          <div class="price">Lifetime license: $19.99</div>
+          <div class="note">No subscription. No cloud lock‑in. Runs locally by default.</div>
+        </div>
+        <a class="btn btnPrimary" href="#waitlist">Get notified on launch</a>
+      </div>
+    </div>
+
+    <div id="waitlist" class="section">
+      <h2>Join the waitlist</h2>
+      <div class="panel">
+        <div style="color:var(--muted);font-size:14px;margin-bottom:10px">
+          Leave your email and we’ll notify you when ClipDock is available on Microsoft Store.
+        </div>
+        <!-- Minimal setup: replace the mailto with a Forms/Google Form link later -->
+        <a class="btn btnPrimary" href="mailto:limingjin777@gmail.com?subject=ClipDock%20Waitlist&body=Please%20add%20me%20to%20the%20ClipDock%20waitlist.%0A%0AEmail%3A%20">
+          Email to join (temporary)
+        </a>
+        <div class="fine">Tip: later you can replace this with Microsoft Forms / Google Form without changing the page layout.</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>
+        <a href="privacy.html">Privacy</a>
+        <span style="opacity:.4;margin:0 8px">·</span>
+        <span>Contact: limingjin777@gmail.com</span>
+      </div>
+      <div>© 2026 ClipDock</div>
+    </div>
+  </div>
+</body>
+</html>
+

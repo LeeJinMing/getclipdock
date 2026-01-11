@@ -1,5 +1,6 @@
-# ScreenFlow Legal
+# ClipDock Site (GitHub Pages)
 
-This repository hosts public legal documents for ScreenFlow.
+This repository hosts the public website pages for ClipDock (landing + privacy).
 
-- Privacy Policy: `privacy.html`
+- Landing page: `index.html`
+- Privacy policy: `privacy.html`
