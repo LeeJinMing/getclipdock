@@ -100,6 +100,11 @@
       background:rgba(255,255,255,.03);
       padding:14px;color:var(--muted2);font-size:14px
     }
+    .demoCard{border-radius:16px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.04);overflow:hidden}
+    .demoHead{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.08)}
+    .demoTitle{font-weight:750}
+    .demoDesc{color:var(--muted);font-size:13px}
+    .demoVideo{width:100%;height:auto;display:block;background:rgba(0,0,0,.25)}
 
     .pricing{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
     .price{font-size:22px;font-weight:800}
@@ -184,12 +189,37 @@
     </div>
 
     <div id="demo" class="section">
-      <h2>15‑sec demos (add GIFs here)</h2>
+      <h2>Demos</h2>
       <div class="demoGrid">
-        <div class="placeholder">Demo #1: Paste to workbench (Ctrl+V) → organize instantly. (Replace with a GIF)</div>
-        <div class="placeholder">Demo #2: Search inside screenshots (OCR) → jump to matches. (Replace with a GIF)</div>
-        <div class="placeholder">Demo #3: Beautify export → consistent aesthetics for docs. (Replace with a GIF)</div>
-        <div class="placeholder">Demo #4: Capture to float → always-on-top reference window. (Replace with a GIF)</div>
+        <div class="demoCard">
+          <div class="demoHead">
+            <div class="demoTitle">Demo #1</div>
+            <div class="demoDesc">Paste to workbench (Ctrl+V) → organized instantly</div>
+          </div>
+          <video class="demoVideo" autoplay loop muted playsinline preload="metadata" poster="assets/demos/demo1.gif">
+            <source src="assets/demos/demo1.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="demoCard">
+          <div class="demoHead">
+            <div class="demoTitle">Demo #2</div>
+            <div class="demoDesc">Search inside screenshots (OCR) → Enter to jump matches</div>
+          </div>
+          <video class="demoVideo" autoplay loop muted playsinline preload="metadata" poster="assets/demos/demo2.gif">
+            <source src="assets/demos/demo2.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="demoCard">
+          <div class="demoHead">
+            <div class="demoTitle">Demo #3</div>
+            <div class="demoDesc">Capture to float → always-on-top reference window</div>
+          </div>
+          <video class="demoVideo" autoplay loop muted playsinline preload="metadata" poster="assets/demos/demo3.gif">
+            <source src="assets/demos/demo3.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
     </div>
 
