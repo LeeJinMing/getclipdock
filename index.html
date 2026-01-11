@@ -104,7 +104,16 @@
     .demoHead{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.08)}
     .demoTitle{font-weight:750}
     .demoDesc{color:var(--muted);font-size:13px}
-    .demoVideo{width:100%;height:auto;display:block;background:rgba(0,0,0,.25)}
+    /* Keep demos readable without taking over the whole page */
+    .demoVideo{
+      width:100%;
+      height:auto;
+      display:block;
+      background:rgba(0,0,0,.25);
+      aspect-ratio:16/9;
+      object-fit:contain;
+      max-height:560px;
+    }
 
     .pricing{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
     .price{font-size:22px;font-weight:800}
