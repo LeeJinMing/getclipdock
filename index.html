@@ -112,7 +112,10 @@
       background:rgba(0,0,0,.25);
       aspect-ratio:16/9;
       object-fit:contain;
-      max-height:560px;
+      max-height:420px;
+    }
+    @media (max-width: 700px){
+      .demoVideo{max-height:320px}
     }
 
     .pricing{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
@@ -156,11 +159,11 @@
     <div class="hero">
       <div>
         <h1>A visual clipboard for people who live in screenshots.</h1>
-        <p class="sub">Capture → annotate → organize → search. Locally.</p>
-        <p class="sub2">Privacy-first. No subscription. Consistent, studio-quality exports.</p>
+        <p class="sub">Capture → annotate → organize → find. Local-first.</p>
+        <p class="sub2">Quiet by default (no focus steal). Privacy-first. Studio-consistent exports.</p>
 
         <div class="ctaRow">
-          <a class="btn btnPrimary" href="#waitlist">Join the waitlist</a>
+          <a class="btn btnPrimary" href="https://forms.office.com/r/xg2vda9q4z" target="_blank" rel="noopener">Join the waitlist</a>
           <a class="btn" href="#demo">See 15‑sec demo</a>
         </div>
         <div class="fine">Windows 10/11 MVP. Coming soon on Microsoft Store.</div>
@@ -176,7 +179,6 @@
             <ul class="bul" style="margin-top:8px">
               <li>Capture → saved to your library (local-first)</li>
               <li>Drag/drop, rename, group, and export</li>
-              <li>Local-first by default</li>
             </ul>
             <div class="tiny" style="margin-top:10px">No popups on capture — open the workbench only when you want.</div>
           </div>
@@ -188,10 +190,10 @@
             </div>
             <ul class="bul" style="margin-top:8px">
               <li>Offline OCR + search inside screenshots</li>
-              <li>Backup via OneDrive / WebDAV (BYOK)</li>
-              <li>Export polish (padding/shadow/rounding)</li>
+              <li>Optional backup (OneDrive or your own storage)</li>
+              <li>Export polish (auto padding, shadow &amp; rounding)</li>
             </ul>
-            <div class="tiny" style="margin-top:10px">Built for fast, predictable workflows — no subscription.</div>
+            <div class="tiny" style="margin-top:10px">Built for fast, predictable workflows — no subscription. <span style="opacity:.85">Advanced: WebDAV supported.</span></div>
           </div>
         </div>
       </div>
@@ -201,9 +203,14 @@
       <h2>Why ClipDock</h2>
       <div class="panel">
         <div style="color:var(--muted);font-size:14px">
-          ClipDock is designed for “screenshot-heavy” work: product specs, bug reports, UI references, research notes, and client feedback.
-          It keeps your library local by default, with optional OneDrive/WebDAV backup — so you stay in control.
+          Built for “screenshot-heavy” work — when you need to capture fast, stay focused, and reuse visuals later.
         </div>
+        <ul class="bul" style="margin-top:10px">
+          <li><b>Stay focused</b>: capture is quiet by default (no focus steal)</li>
+          <li><b>Find things later</b>: search your library, including text inside screenshots (offline OCR in Pro)</li>
+          <li><b>Look consistent</b>: export polish for clean padding/shadow/rounding (Pro)</li>
+        </ul>
+        <div class="tiny" style="margin-top:10px">Local-first by default. Optional backup: OneDrive or your own storage.</div>
       </div>
     </div>
 
@@ -213,7 +220,7 @@
         <div class="demoCard">
           <div class="demoHead">
             <div class="demoTitle">Demo #1</div>
-            <div class="demoDesc">Import from clipboard (Ctrl+V) → organized instantly</div>
+            <div class="demoDesc">Paste from clipboard → organized instantly</div>
           </div>
           <video class="demoVideo" autoplay loop muted playsinline preload="metadata" poster="assets/demos/demo1.gif">
             <source src="assets/demos/demo1.mp4" type="video/mp4" />
@@ -223,7 +230,7 @@
         <div class="demoCard">
           <div class="demoHead">
             <div class="demoTitle">Demo #2</div>
-            <div class="demoDesc">Search inside screenshots (OCR) → Enter to jump matches</div>
+            <div class="demoDesc">Type to find text inside screenshots (offline OCR)</div>
           </div>
           <video class="demoVideo" autoplay loop muted playsinline preload="metadata" poster="assets/demos/demo2.gif">
             <source src="assets/demos/demo2.mp4" type="video/mp4" />
@@ -256,7 +263,7 @@
           </div>
           <div class="note">Capture, organize, and export — local-first.</div>
           <div class="tierCta">
-            <a class="btn btnPrimary" href="https://forms.office.com/r/xg2vda9q4z" target="_blank" rel="noopener">Get notified (Free)</a>
+            <a class="btn btnPrimary" href="#waitlist">Get notified</a>
           </div>
         </div>
 
@@ -270,7 +277,7 @@
           </div>
           <div class="note">No subscription. No cloud lock‑in. Runs locally by default.</div>
           <div class="tierCta">
-            <a class="btn btnPrimary" href="https://forms.office.com/r/xg2vda9q4z" target="_blank" rel="noopener">Get notified (Pro)</a>
+            <a class="btn btnPrimary" href="#waitlist">Get notified</a>
           </div>
         </div>
       </div>
@@ -280,12 +287,12 @@
       <h2>Join the waitlist</h2>
       <div class="panel">
         <div style="color:var(--muted);font-size:14px;margin-bottom:10px">
-          Leave your email and we’ll notify you when ClipDock is available on Microsoft Store.
+          Leave your email and we’ll notify you when ClipDock is available on Microsoft Store. No spam.
         </div>
         <a class="btn btnPrimary" href="https://forms.office.com/r/xg2vda9q4z" target="_blank" rel="noopener">
           Join waitlist
         </a>
-        <div class="fine">Opens Microsoft Forms in a new tab.</div>
+        <div class="fine">Opens Microsoft Forms in a new tab (about 30 seconds).</div>
       </div>
     </div>
 
