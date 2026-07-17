@@ -13,16 +13,16 @@
       --text:#e9eef8;
       --muted:rgba(233,238,248,.72);
       --muted2:rgba(233,238,248,.56);
-      --brand:#7c3aed;
-      --brand2:#bda6ff;
-      --ok:#22c55e;
+      --brand:#45b8a6;
+      --brand2:#8fd5ca;
+      --ok:#45b8a6;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
       font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;
-      background:radial-gradient(1200px 600px at 20% -20%, rgba(124,58,237,.35), transparent 60%),
-                 radial-gradient(900px 500px at 100% 0%, rgba(189,166,255,.18), transparent 55%),
+      background:radial-gradient(1200px 600px at 20% -20%, rgba(69,184,166,.18), transparent 60%),
+                 radial-gradient(900px 500px at 100% 0%, rgba(143,213,202,.10), transparent 55%),
                  var(--bg);
       color:var(--text);
       line-height:1.55;
@@ -33,13 +33,18 @@
     .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px}
     .logo{
       width:34px;height:34px;border-radius:10px;
-      background:linear-gradient(135deg, rgba(124,58,237,.95), rgba(189,166,255,.70));
-      box-shadow:0 10px 30px rgba(124,58,237,.22);
+      background:#45b8a6;
+      box-shadow:0 10px 30px rgba(69,184,166,.18);
       border:1px solid rgba(255,255,255,.14);
     }
     .nav{display:flex;gap:16px;align-items:center;color:var(--muted);font-size:14px}
     .nav a{opacity:.9;text-decoration:none}
     .nav a:hover{opacity:1;text-decoration:underline}
+    @media (max-width: 700px){
+      .topbar{align-items:flex-start;flex-direction:column}
+      .nav{width:100%;flex-wrap:wrap;gap:8px 14px}
+      h1{font-size:36px}
+    }
 
     .hero{margin-top:34px;display:grid;grid-template-columns:.90fr 1.10fr;gap:22px;align-items:start}
     @media (max-width: 900px){
@@ -56,9 +61,10 @@
       color:var(--text);text-decoration:none;font-weight:600;
     }
     .btnPrimary{
-      background:linear-gradient(135deg, rgba(124,58,237,.95), rgba(189,166,255,.70));
-      border-color:rgba(255,255,255,.18);
-      box-shadow:0 16px 42px rgba(124,58,237,.22);
+      background:#45b8a6;
+      color:#071310;
+      border-color:rgba(143,213,202,.72);
+      box-shadow:0 12px 30px rgba(69,184,166,.16);
     }
     .btn:hover{filter:brightness(1.06)}
     .fine{margin-top:10px;color:var(--muted2);font-size:13px}
@@ -72,8 +78,8 @@
     .badge{
       display:inline-flex;align-items:center;gap:8px;
       padding:10px 12px;border-radius:999px;
-      background:linear-gradient(135deg, rgba(124,58,237,.32), rgba(234,211,154,.18));
-      border:1px solid rgba(124,58,237,.40);
+      background:rgba(69,184,166,.16);
+      border:1px solid rgba(69,184,166,.38);
       color:rgba(245,241,230,.95);
       font-weight:650;
       box-shadow:0 12px 26px rgba(0,0,0,.20);
@@ -153,7 +159,7 @@
         <a href="#shortcuts">Shortcuts</a>
         <a href="#demo">Demo</a>
         <a href="#pricing">Pricing</a>
-        <a href="#waitlist">Waitlist</a>
+        <a href="#support">Support</a>
       </div>
     </div>
 
@@ -164,10 +170,10 @@
         <p class="sub2">Quiet by default (no focus steal). Privacy-first. Studio-consistent exports.</p>
 
         <div class="ctaRow">
-          <a class="btn btnPrimary" href="https://forms.office.com/r/xg2vda9q4z" target="_blank" rel="noopener">Join the waitlist</a>
+          <a class="btn btnPrimary" href="#pricing">See Free &amp; Pro</a>
           <a class="btn" href="#demo">See 15‑sec demo</a>
         </div>
-        <div class="fine">Windows 10/11 MVP. Coming soon on Microsoft Store.</div>
+        <div class="fine">For Windows 10 and Windows 11. Available through Microsoft Store.</div>
       </div>
 
       <div class="panel">
@@ -179,7 +185,8 @@
             </div>
             <ul class="bul" style="margin-top:8px">
               <li>Capture → saved to your library (local-first)</li>
-              <li>Drag/drop, rename, group, and export</li>
+              <li>Two custom workspaces and three floating references</li>
+              <li>Basic annotation/export, manual backup, and a 100-image OCR experience</li>
             </ul>
             <div class="tiny" style="margin-top:10px">No popups on capture — open the workbench only when you want.</div>
           </div>
@@ -187,14 +194,14 @@
           <div class="tierCard">
             <div class="tierHead">
               <div class="tierName">★ Pro</div>
-              <div class="tierTag">Lifetime upgrade</div>
+              <div class="tierTag">Annual · Store-managed</div>
             </div>
             <ul class="bul" style="margin-top:8px">
-              <li>Offline OCR + search inside screenshots</li>
-              <li>Optional backup (OneDrive or your own storage)</li>
-              <li>Export polish (auto padding, shadow &amp; rounding)</li>
+              <li>Find anything locally across every workspace</li>
+              <li>Keep projects recoverable with verified automatic backups</li>
+              <li>Deliver faster with reusable multi-output Export Recipes</li>
             </ul>
-            <div class="tiny" style="margin-top:10px">Built for fast, predictable workflows — no subscription. <span style="opacity:.85">Advanced: WebDAV supported.</span></div>
+            <div class="tiny" style="margin-top:10px">Microsoft Store manages trial availability, localized price, renewal and cancellation. Existing Lifetime owners keep permanent Pro access.</div>
           </div>
         </div>
       </div>
@@ -208,10 +215,11 @@
         </div>
         <ul class="bul" style="margin-top:10px">
           <li><b>Stay focused</b>: capture is quiet by default (no focus steal)</li>
-          <li><b>Find things later</b>: search your library, including text inside screenshots (offline OCR in Pro)</li>
-          <li><b>Look consistent</b>: export polish for clean padding/shadow/rounding (Pro)</li>
+          <li><b>Find things later</b>: search local OCR, names, tags and notes without uploading screenshots</li>
+          <li><b>Recover confidently</b>: create verified restore points in a folder you choose</li>
+          <li><b>Deliver consistently</b>: export individual images, contact sheets, step collages and image PDFs</li>
         </ul>
-        <div class="tiny" style="margin-top:10px">Local-first by default. Optional backup: OneDrive or your own storage.</div>
+        <div class="tiny" style="margin-top:10px">Local-first by default. A backup folder may be local or synchronized by a provider you choose.</div>
       </div>
     </div>
 
@@ -235,8 +243,8 @@
           <ul class="bul">
             <li>Open Settings: More (&#8230;) &gt; Settings</li>
             <li>Change hotkeys: Settings &gt; Hotkeys &gt; Record</li>
-            <li>Auto-start: Settings &gt; Hotkeys &gt; Start with Windows</li>
-            <li>Pro troubleshooting: Settings &gt; Pro &gt; Advanced &gt; Refresh entitlements</li>
+            <li>Auto-start: Settings &gt; General &gt; Start with Windows</li>
+            <li>Pro troubleshooting: Settings &gt; Pro &gt; Refresh entitlements</li>
           </ul>
         </div>
       </div>
@@ -292,7 +300,7 @@
           </div>
           <div class="note">Capture, organize, and export — local-first.</div>
           <div class="tierCta">
-            <a class="btn btnPrimary" href="#waitlist">Get notified</a>
+            <a class="btn btnPrimary" href="#features">Explore features</a>
           </div>
         </div>
 
@@ -300,28 +308,30 @@
           <div class="tierHead">
             <div>
               <div class="tierName">★ Pro</div>
-              <div class="tierTag">Lifetime</div>
+              <div class="tierTag">Annual · Store-managed</div>
             </div>
-            <div class="tierPrice">$19.99</div>
+            <div class="tierPrice">US$19.99 / year*</div>
           </div>
-          <div class="note">No subscription. No cloud lock‑in. Runs locally by default.</div>
+          <div class="note">Find anything locally, keep projects recoverable, and deliver faster. Your existing files remain accessible if Pro expires.</div>
           <div class="tierCta">
-            <a class="btn btnPrimary" href="#waitlist">Get notified</a>
+            <a class="btn btnPrimary" href="https://forms.office.com/r/xg2vda9q4z" target="_blank" rel="noopener">Send feedback</a>
           </div>
         </div>
       </div>
+      <div class="fine">*Planned US reference price for the Annual offer. Microsoft Store controls availability, localized price, trial, billing, renewal and cancellation.</div>
     </div>
 
-    <div id="waitlist" class="section">
-      <h2>Join the waitlist</h2>
+    <div id="support" class="section">
+      <h2>Support &amp; feedback</h2>
       <div class="panel">
         <div style="color:var(--muted);font-size:14px;margin-bottom:10px">
-          Leave your email and we’ll notify you when ClipDock is available on Microsoft Store. No spam.
+          Need help with OCR, backup, diagnostics or a Microsoft Store entitlement? Visit support or send feedback.
         </div>
+        <a class="btn" href="support.html">Open support</a>
         <a class="btn btnPrimary" href="https://forms.office.com/r/xg2vda9q4z" target="_blank" rel="noopener">
-          Join waitlist
+          Send feedback
         </a>
-        <div class="fine">Opens Microsoft Forms in a new tab (about 30 seconds).</div>
+        <div class="fine">The feedback form opens Microsoft Forms in a new tab.</div>
       </div>
     </div>
 
@@ -329,7 +339,9 @@
       <div>
         <a href="privacy.html">Privacy</a>
         <span style="opacity:.4;margin:0 8px">·</span>
-        <span>Contact: limingjin777@gmail.com</span>
+        <a href="support.html">Support</a>
+        <span style="opacity:.4;margin:0 8px">·</span>
+        <a href="mailto:limingjin777@gmail.com">Contact</a>
       </div>
       <div>© 2026 ClipDock</div>
     </div>
