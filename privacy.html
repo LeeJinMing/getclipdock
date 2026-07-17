@@ -13,27 +13,31 @@
 </head>
 <body>
   <h1>ClipDock Privacy Policy</h1>
-  <p class="muted">Effective date: 2026-01-10</p>
+  <p class="muted">Effective date: 2026-07-18</p>
 
   <h2>1. Who we are</h2>
   <p>ClipDock is a Windows desktop tool for organizing screenshots and managing a visual clipboard.</p>
 
-  <h2>2. What data we collect</h2>
+  <h2>2. Data processed by the app</h2>
+  <p>ClipDock does not operate a ClipDock cloud account or advertising service. The app processes
+    the following data so its features can work:</p>
   <ul>
     <li><b>Images you capture/import</b>: screenshots or images you paste/drag into the app.</li>
     <li><b>Workspace metadata</b>: necessary info to display/manage items (e.g., filename, size, grouping, timestamps).</li>
     <li><b>OCR text (if enabled)</b>: text recognized from images for local search and copy.</li>
-    <li><b>Local diagnostic logs (optional)</b>: runtime logs used for troubleshooting (not used for advertising profiling).</li>
+    <li><b>Local diagnostic logs</b>: runtime and Store-entitlement status used for troubleshooting. Logs stay local unless you choose to copy and share them.</li>
   </ul>
 
   <h2>3. Where data is stored</h2>
-  <p><b>By default, all data is stored on your local device.</b></p>
+  <p><b>By default, screenshots, OCR text, metadata, settings and diagnostic logs are stored on your local device.</b>
+    Local OCR is performed through Windows OCR components. ClipDock does not send image content to an AI service.</p>
 
-  <h2>4. Cloud upload</h2>
+  <h2>4. Network access and user-chosen backup locations</h2>
   <ul>
-    <li><b>No upload by default</b>: ClipDock does not upload your screenshots or OCR text unless you explicitly initiate an action.</li>
-    <li><b>OneDrive migration (when you choose it)</b>: if you select a OneDrive folder and confirm migration, the app copies your local workspaces to that folder.</li>
-    <li><b>WebDAV backup (when you choose it)</b>: if you configure WebDAV and click upload/restore, the app uploads/downloads your workspaces backup file to/from your WebDAV server.</li>
+    <li><b>No ClipDock upload service</b>: ClipDock does not upload screenshots or OCR text to a server operated by ClipDock.</li>
+    <li><b>Folders you choose</b>: migration and versioned-backup features copy workspace data to a local folder you select. If that folder is synchronized by OneDrive or another provider, that provider processes the copied files under its own terms and privacy policy.</li>
+    <li><b>Microsoft Store</b>: the app contacts Microsoft Store for product availability, licensing, purchase, subscription and review operations. ClipDock does not receive your payment-card details.</li>
+    <li><b>Links you open</b>: Privacy, email, feedback and subscription-management actions open your browser, mail app, Microsoft Forms or Microsoft account pages. Data you submit there is handled by that service.</li>
   </ul>
 
   <h2>5. Permissions &amp; system capabilities</h2>
@@ -43,17 +47,20 @@
     <li><b>File system access</b>: store workspaces locally, export images, migrate and backup data.</li>
   </ul>
 
-  <h2>6. Credentials &amp; sensitive information</h2>
-  <p>If you use WebDAV, credentials are stored locally and encrypted on your device (e.g., using Windows data protection). We do not proactively collect or upload your credentials.</p>
+  <h2>6. Diagnostics and sensitive information</h2>
+  <p>ClipDock does not intentionally include screenshot pixels, OCR text or full local file paths in Store diagnostics.
+    Local logs and exported files can still reflect names you chose. Review copied diagnostics and attachments before sending them to support.</p>
 
   <h2>7. How to delete your data</h2>
   <ul>
-    <li>You can delete images/workspaces within the app.</li>
-    <li>You can also delete the local workspaces folder to remove all data (path is shown in app settings).</li>
+    <li>You can delete images and eligible workspaces within the app. Deleted content may remain in ClipDock's recently-deleted area, Windows Recycle Bin or a backup point until you remove it there.</li>
+    <li>You can delete the local workspaces folder and any user-chosen backup folders to remove those copies. Folder locations are available from app settings and diagnostics.</li>
+    <li>Uninstalling the app may not delete user-created libraries, exports or backups. Remove those files separately if you no longer want them.</li>
   </ul>
 
   <h2>8. Contact</h2>
-  <p>If you have privacy questions, contact: <b>limingjin777@gmail.com</b></p>
+  <p>If you have privacy questions, contact: <a href="mailto:limingjin777@gmail.com">limingjin777@gmail.com</a>.
+    For product help, see <a href="support.html">ClipDock Support</a>.</p>
 
   <h2>9. Policy updates</h2>
   <p>We may update this policy. Updates will be posted on this page.</p>
