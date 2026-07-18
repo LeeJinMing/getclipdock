@@ -259,6 +259,14 @@
     details[open] summary::after{content:"−"}
     details p{margin:0 0 18px;color:var(--muted);font-size:14px}
 
+    .guideGridHome{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .guideCardHome{display:flex;flex-direction:column;min-height:245px;padding:25px;border:1px solid var(--border);border-radius:var(--radius-md);background:linear-gradient(155deg,var(--surface-raised),var(--surface));text-decoration:none;transition:transform .16s ease,border-color .16s ease,background .16s ease}
+    .guideCardHome:hover{transform:translateY(-2px);border-color:var(--border-strong);background:var(--surface-raised)}
+    .guideCardHome small{color:var(--brand);font-size:11px;font-weight:850;letter-spacing:.12em;text-transform:uppercase}
+    .guideCardHome h3{margin:18px 0 9px;font-size:21px;line-height:1.25;letter-spacing:-.025em}
+    .guideCardHome p{margin:0;color:var(--muted);font-size:14px}
+    .guideCardHome span{margin-top:auto;padding-top:22px;color:#7bd2c5;font-size:13px;font-weight:800}
+
     .supportPanel{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:32px;border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--surface-raised)}
     .supportPanel h2{margin-bottom:8px;font-size:30px}.supportPanel p{max-width:660px;margin:0;color:var(--muted)}
     .supportActions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
@@ -281,6 +289,7 @@
       .proGrid{grid-template-columns:1fr}
       .privacyStrip{grid-template-columns:auto 1fr}.privacyFacts{grid-column:2;flex-wrap:wrap}
       .pricingGrid,.faqGrid{grid-template-columns:1fr}
+      .guideGridHome{grid-template-columns:1fr}
       .priceCard{min-height:auto}
       .supportPanel{align-items:flex-start;flex-direction:column}.supportActions{justify-content:flex-start}
     }
@@ -331,13 +340,14 @@
 
   <header class="siteHeader">
     <div class="shell headerInner">
-      <a class="brandLockup" href="#" aria-label="ClipDock home">
+      <a class="brandLockup" href="/" aria-label="ClipDock home">
         <span class="brandMark" aria-hidden="true"></span>
         <span>ClipDock</span>
       </a>
       <nav class="headerNav" aria-label="Primary navigation">
         <a href="#features">Why ClipDock</a>
         <a href="#pro">Pro</a>
+        <a href="#guides">Guides</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
         <a class="button buttonSmall headerStore" href="https://apps.microsoft.com/detail/9NG4M120496J?cid=clipdock_website_header" target="_blank" rel="noopener noreferrer">Get ClipDock</a>
@@ -462,7 +472,7 @@
         </div>
         <div class="proGrid">
           <div class="proCard"><strong>Find everything</strong><span>Search OCR and context across every workspace as your library grows.</span></div>
-          <div class="proCard"><strong>Recover confidently</strong><span>Create verified automatic backups in a location you choose.</span></div>
+          <div class="proCard"><strong>Recover confidently</strong><span>Create a verified restore point every 24 hours while ClipDock is running.</span></div>
           <div class="proCard"><strong>Deliver faster</strong><span>Save reusable multi-output Export Recipes for repeated workflows.</span></div>
         </div>
         <div class="proBottom">
@@ -480,6 +490,19 @@
       </div>
     </section>
 
+    <section id="guides" class="shell section" aria-labelledby="guides-title">
+      <div class="sectionHead">
+        <p class="kicker">Practical Windows guides</p>
+        <h2 id="guides-title">Build a screenshot system you can maintain.</h2>
+        <p class="sectionLead">Use Windows tools on their own, or add ClipDock when your screenshots become recurring work. Each guide explains the boundary honestly.</p>
+      </div>
+      <div class="guideGridHome">
+        <a class="guideCardHome" href="/search-text-in-screenshots-windows.html"><small>Local OCR</small><h3>Search text inside screenshots</h3><p>Understand how on-device OCR turns remembered words into a path back to the original image.</p><span>Read the OCR guide →</span></a>
+        <a class="guideCardHome" href="/how-to-organize-screenshots-on-windows.html"><small>9-step system</small><h3>Organize screenshots on Windows</h3><p>A practical workflow for folders, names, tags, cleanup, exports and recoverable backups.</p><span>Build the workflow →</span></a>
+        <a class="guideCardHome" href="/organize-snipping-tool-screenshots.html"><small>Post-capture workflow</small><h3>Organize Snipping Tool captures</h3><p>Keep Win + Shift + S, then give the screenshots worth saving a searchable visual home.</p><span>See the companion workflow →</span></a>
+      </div>
+    </section>
+
     <section id="pricing" class="shell section" aria-labelledby="pricing-title">
       <div class="sectionHead">
         <p class="kicker">Simple pricing</p>
@@ -494,7 +517,7 @@
             <li>Three floating references</li>
             <li>Basic annotation and export</li>
             <li>Manual backup</li>
-            <li>100-image local OCR experience</li>
+            <li>Local OCR indexing for up to 100 images per workspace</li>
           </ul>
           <a class="button" href="https://apps.microsoft.com/detail/9NG4M120496J?cid=clipdock_website_free_v2" target="_blank" rel="noopener noreferrer">Get ClipDock free</a>
         </article>
@@ -503,7 +526,7 @@
           <ul class="featureList">
             <li>Unlimited workspaces and floating references</li>
             <li>Local OCR search across the full library</li>
-            <li>Verified automatic backup and restore</li>
+            <li>Verified 24-hour restore points while ClipDock runs</li>
             <li>Reusable multi-output Export Recipes</li>
             <li>Microsoft Store purchase and restore</li>
           </ul>
@@ -522,7 +545,7 @@
         <details><summary>Does ClipDock upload my screenshots?</summary><p>No for normal capture and search. Your library stays local and OCR runs on your PC. Backups go only to a location you explicitly choose.</p></details>
         <details><summary>What happens if Pro expires?</summary><p>Your existing images remain accessible. Store-managed Pro capabilities stop until the subscription is active again.</p></details>
         <details><summary>Do Lifetime owners lose access?</summary><p>No. Existing Lifetime owners keep permanent Pro access and can restore that entitlement through Microsoft Store.</p></details>
-        <details><summary>Can I use ClipDock without Pro?</summary><p>Yes. Free includes the core workbench, two custom workspaces, three floating references, basic annotation/export, manual backup and a 100-image OCR experience.</p></details>
+        <details><summary>Can I use ClipDock without Pro?</summary><p>Yes. Free includes the core workbench, two custom workspaces, three floating references, basic annotation/export, manual backup and local OCR indexing for up to 100 images per workspace.</p></details>
         <details><summary>Which Windows versions are supported?</summary><p>ClipDock is built for Windows 10 and Windows 11 and installs through Microsoft Store.</p></details>
         <details><summary>Who manages billing and cancellation?</summary><p>Microsoft Store manages purchase, localized pricing, renewal, cancellation and entitlement restore.</p></details>
       </div>
@@ -541,7 +564,7 @@
 
   <footer>
     <div class="shell footerInner">
-      <div class="footerLinks"><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="mailto:limingjin777@gmail.com">Contact</a></div>
+      <div class="footerLinks"><a href="/#guides">Guides</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="mailto:limingjin777@gmail.com">Contact</a></div>
       <div>© 2026 ClipDock · Built for Windows</div>
     </div>
   </footer>

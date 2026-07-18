@@ -3,50 +3,63 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0b1113" />
   <meta name="description" content="ClipDock support for local OCR, workspace recovery, backup, diagnostics and Microsoft Store entitlements." />
-  <meta name="robots" content="index,follow" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://getclipdock.com/support.html" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="/assets/content.css" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ClipDock" />
+  <meta property="og:title" content="ClipDock Support" />
+  <meta property="og:description" content="Help with local OCR, recovery, backup, diagnostics and Microsoft Store entitlements." />
+  <meta property="og:url" content="https://getclipdock.com/support.html" />
+  <meta property="og:image" content="https://getclipdock.com/assets/og/clipdock-og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ClipDock Support" />
+  <meta name="twitter:description" content="Practical help for the ClipDock Windows screenshot workspace." />
+  <meta name="twitter:image" content="https://getclipdock.com/assets/og/clipdock-og.png" />
   <title>ClipDock Support</title>
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;max-width:920px;margin:32px auto;padding:0 16px;line-height:1.6;color:#182024}
-    h1,h2{line-height:1.25} a{color:#176f68}.muted{color:#5d696d}.card{border:1px solid #d5dddc;border-radius:10px;padding:16px;margin:14px 0}
-    code{background:#eef2f1;padding:2px 6px;border-radius:5px}
-  </style>
 </head>
 <body>
-  <h1>ClipDock Support</h1>
-  <p class="muted">Help for the Microsoft Store version of ClipDock for Windows 10 and Windows 11.</p>
+  <a class="skipLink" href="#main">Skip to content</a>
+  <header class="siteHeader"><div class="shell headerInner"><a class="brandLockup" href="/" aria-label="ClipDock home"><span class="brandMark" aria-hidden="true"></span><span>ClipDock</span></a><nav class="headerNav" aria-label="Primary navigation"><a href="/">Home</a><a href="/#guides">Guides</a><a href="/privacy.html">Privacy</a><a class="button buttonSmall headerStore" href="https://apps.microsoft.com/detail/9NG4M120496J?cid=clipdock_support_header" target="_blank" rel="noopener noreferrer">Get ClipDock</a></nav></div></header>
 
-  <div class="card">
-    <h2>Contact</h2>
-    <p>Email <a href="mailto:limingjin777@gmail.com?subject=ClipDock%20Support">limingjin777@gmail.com</a>
-      or use the <a href="https://forms.office.com/r/xg2vda9q4z" rel="noopener">ClipDock feedback form</a>.</p>
-    <p>Please include the app version, Windows version, steps to reproduce and the exact error message.
-      Do not attach private screenshots or OCR text unless they are necessary and you have reviewed or redacted them.</p>
-  </div>
+  <main id="main">
+    <div class="shell legalHero"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><span>Support</span></nav><p class="eyebrow">Product help</p><h1>ClipDock Support</h1><p>Help for the Microsoft Store version of ClipDock on Windows 10 and Windows 11.</p></div>
+    <div class="shell legalBody">
+      <div class="supportCard">
+        <h2>Contact support</h2>
+        <p>Email <a href="mailto:limingjin777@gmail.com?subject=ClipDock%20Support">limingjin777@gmail.com</a> or use the <a href="https://forms.office.com/r/xg2vda9q4z" target="_blank" rel="noopener noreferrer">ClipDock feedback form</a>.</p>
+        <p>Please include the app version, Windows version, steps to reproduce and exact error text. Do not attach private screenshots or OCR text unless necessary and reviewed or redacted.</p>
+      </div>
 
-  <h2>Local data and recovery</h2>
-  <p>ClipDock stores its library locally by default. In <b>Settings → Storage</b> you can inspect workspace
-    locations, create a verified manual backup, preview a restore and rebuild the local search index.
-    Rebuilding the index is a repair action and does not require Pro.</p>
+      <h2>Local data and recovery</h2>
+      <p>ClipDock stores its library locally by default. In <strong>Settings → Storage</strong> you can inspect workspace locations, create a verified manual backup, preview a restore and rebuild the local search index. Rebuilding the index is a repair action and does not require Pro.</p>
 
-  <h2>OCR troubleshooting</h2>
-  <p>OCR runs locally using Windows OCR components. Recognition depends on image clarity and the OCR language
-    packs installed in Windows. Check OCR status in the app, install the relevant Windows language component,
-    then retry recognition on the selected image.</p>
+      <h2>OCR troubleshooting</h2>
+      <p>OCR runs locally using Windows OCR components. Recognition depends on image clarity and the OCR language components installed in Windows. Check OCR status in the app, install the relevant Windows language component, then run recognition again on the selected image.</p>
+      <ul><li>Prefer sharp screenshots with clear contrast and readable text.</li><li>Try a shorter, distinctive search term if a full sentence does not match.</li><li>Use a name, tag or note for critical context that OCR may not capture.</li></ul>
+      <p>For the full workflow and limitations, read <a href="/search-text-in-screenshots-windows.html">Search text inside screenshots on Windows</a>.</p>
 
-  <h2>Microsoft Store purchase and subscription</h2>
-  <p>Trial availability, localized price, billing, renewal and cancellation are managed by Microsoft Store.
-    Use <b>Settings → Pro → Refresh entitlements</b> after signing in with the purchasing Microsoft account.
-    Subscription management opens your Microsoft account services page. Existing screenshots, manual backup,
-    restore and export remain accessible if Pro expires.</p>
+      <h2>Microsoft Store purchase and subscription</h2>
+      <p>Trial availability, localized price, billing, renewal and cancellation are managed by Microsoft Store. Use <strong>Settings → Pro → Refresh entitlements</strong> after signing in with the purchasing Microsoft account. Subscription management opens your Microsoft account services page.</p>
+      <p>Existing screenshots, manual backup, restore and basic export remain accessible if Pro expires. Existing Lifetime owners retain their permanent Pro entitlement.</p>
 
-  <h2>Diagnostics</h2>
-  <p>Use <b>Settings → About → Diagnostics</b> to refresh entitlements, open local logs or copy a diagnostic summary.
-    Diagnostics do not change your entitlement. Review copied text before sending it to support.</p>
+      <h2>Diagnostics</h2>
+      <p>Use <strong>Settings → About → Diagnostics</strong> to refresh entitlements, open local logs or copy a diagnostic summary. Diagnostics do not change your entitlement. Review copied text before sending it to support.</p>
 
-  <p><a href="privacy.html">Privacy Policy</a></p>
+      <h2>Guides</h2>
+      <div class="relatedGrid">
+        <a class="relatedCard" href="/how-to-organize-screenshots-on-windows.html"><strong>Organize screenshots on Windows</strong><span>A practical system for naming, sorting, cleanup and backup.</span></a>
+        <a class="relatedCard" href="/organize-snipping-tool-screenshots.html"><strong>Organize Snipping Tool captures</strong><span>A clear manual post-capture workflow—without claiming automatic integration.</span></a>
+      </div>
+    </div>
+  </main>
+  <footer><div class="shell footerInner"><span>© 2026 ClipDock. Built for Windows.</span><div class="footerLinks"><a href="/">Home</a><a href="/#guides">Guides</a><a href="/privacy.html">Privacy</a><a href="mailto:limingjin777@gmail.com">Contact</a></div></div></footer>
 </body>
 </html>
