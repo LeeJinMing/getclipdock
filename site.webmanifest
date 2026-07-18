@@ -1,0 +1,16 @@
+{
+  "name": "ClipDock",
+  "short_name": "ClipDock",
+  "description": "A private, searchable visual workspace for screenshots on Windows.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0b1113",
+  "theme_color": "#0b1113",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
