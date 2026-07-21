@@ -101,6 +101,7 @@ h1{max-width:760px;margin-bottom:20px;font-size:clamp(42px,5.2vw,66px);line-heig
   overflow:hidden;border:1px solid var(--border-strong);border-radius:20px;
   background:var(--bg-deep);box-shadow:var(--shadow),0 0 0 8px rgba(255,255,255,.018);
 }
+.productVisual img.actualProduct{display:block;width:100%;height:auto}
 .visualTop{display:flex;align-items:center;gap:8px;height:44px;padding:0 13px;border-bottom:1px solid var(--border);background:#121a1e;color:var(--muted);font-size:10px}
 .visualBrand{display:flex;align-items:center;gap:7px;color:var(--text);font-weight:850}.visualBrand i{width:14px;height:14px;border-radius:4px;background:var(--brand)}
 .visualDots{display:flex;gap:5px;margin-left:auto}.visualDots i{width:5px;height:5px;border-radius:50%;background:#617478}
