@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="dark" />
   <meta name="theme-color" content="#0b1113" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta name="description" content="ClipDock turns screenshots into a private, searchable visual workspace on Windows. Capture quietly, find text locally, and export consistently." />
+  <meta name="description" content="Capture multiple screen regions without interrupting your work. ClipDock keeps screenshots organized in visual workspaces with private local OCR search on Windows." />
   <link rel="canonical" href="https://getclipdock.com/" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
@@ -17,7 +17,7 @@
   <meta property="og:site_name" content="ClipDock" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="ClipDock — Searchable Screenshot Organizer for Windows" />
-  <meta property="og:description" content="A private, searchable visual workspace for Windows. Local OCR, organized workspaces, floating references, and consistent exports." />
+  <meta property="og:description" content="Capture references continuously, keep them organized by project, and find any screenshot later with private local OCR on Windows." />
   <meta property="og:url" content="https://getclipdock.com/" />
   <meta property="og:image" content="https://getclipdock.com/assets/og/clipdock-og.png" />
   <meta property="og:image:width" content="1200" />
@@ -25,7 +25,7 @@
   <meta property="og:image:alt" content="ClipDock workspace on Windows with tagged screenshot cards and the Details inspector open" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ClipDock — Searchable Screenshot Organizer for Windows" />
-  <meta name="twitter:description" content="Capture quietly, find screenshot text locally, and keep visual work organized on Windows." />
+  <meta name="twitter:description" content="Capture references continuously, organize them by project, and find any screenshot later with local OCR on Windows." />
   <meta name="twitter:image" content="https://getclipdock.com/assets/og/clipdock-og.png" />
   <meta name="twitter:image:alt" content="ClipDock workspace on Windows with tagged screenshot cards and the Details inspector open" />
   <title>ClipDock — Searchable Screenshot Organizer for Windows</title>
@@ -241,7 +241,7 @@
     details[open] summary::after{content:"−"}
     details p{margin:0 0 18px;color:var(--muted);font-size:14px}
 
-    .guideGridHome{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .guideGridHome{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .guideCardHome{display:flex;flex-direction:column;min-height:245px;padding:25px;border:1px solid var(--border);border-radius:var(--radius-md);background:linear-gradient(155deg,var(--surface-raised),var(--surface));text-decoration:none;transition:transform .16s ease,border-color .16s ease,background .16s ease}
     .guideCardHome:hover{transform:translateY(-2px);border-color:var(--border-strong);background:var(--surface-raised)}
     .guideCardHome small{color:var(--brand);font-size:11px;font-weight:850;letter-spacing:.12em;text-transform:uppercase}
@@ -310,7 +310,7 @@
     "name":"ClipDock",
     "applicationCategory":"UtilitiesApplication",
     "operatingSystem":"Windows 10, Windows 11",
-    "description":"A private, searchable visual workspace for screenshots on Windows.",
+    "description":"A private Windows screenshot workspace for continuous region capture, project organization, local OCR retrieval and reusable exports.",
     "url":"https://getclipdock.com/",
     "image":"https://getclipdock.com/assets/og/clipdock-og.png",
     "downloadUrl":"https://apps.microsoft.com/detail/9NG4M120496J",
@@ -342,8 +342,8 @@
     <section class="shell hero" aria-labelledby="hero-title">
       <div class="heroCopy">
         <p class="eyebrow"><span class="eyebrowDot" aria-hidden="true"></span>Windows screenshot workspace</p>
-        <h1 id="hero-title">Capture once.<span>Find any screenshot in seconds.</span></h1>
-        <p class="heroLead">ClipDock turns screenshots into a private, searchable visual workspace—so references, ideas and client feedback stop disappearing into folders.</p>
+        <h1 id="hero-title">Capture what matters.<span>Find it when you need it.</span></h1>
+        <p class="heroLead">Capture multiple screen regions without breaking your flow. ClipDock keeps every useful reference in a private visual workspace, organized by project and searchable later with local OCR.</p>
         <div class="heroActions">
           <a class="button buttonPrimary" href="https://apps.microsoft.com/detail/9NG4M120496J?cid=clipdock_website_hero_v2" target="_blank" rel="noopener noreferrer">
             Get ClipDock free
@@ -373,14 +373,14 @@
       <div class="sectionHead">
         <p class="kicker">Built for screenshot-heavy work</p>
         <h2 id="features-title">Less hunting. More useful context.</h2>
-        <p class="sectionLead">ClipDock keeps capture quiet, makes screenshot text searchable on your PC, and turns scattered images into reusable working material.</p>
+        <p class="sectionLead">ClipDock keeps repeated capture quiet, preserves project context, makes screenshot text searchable on your PC, and turns scattered images into reusable working material.</p>
       </div>
       <div class="outcomeGrid">
         <article class="outcomeCard">
           <span class="iconTile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3M8 12h8"/></svg></span>
-          <h3>Capture without interruption</h3>
-          <p>Save a screenshot without dragging another window into focus. Open the workbench when you are ready to organize.</p>
-          <span class="outcomeMeta">Quiet capture · custom hotkeys</span>
+          <h3>Collect without interruption</h3>
+          <p>Capture one useful region after another without opening a Save As dialog or dragging the workbench into focus.</p>
+          <span class="outcomeMeta">Repeated region capture · custom hotkeys</span>
         </article>
         <article class="outcomeCard">
           <span class="iconTile" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M8 9h6M8 12h4"/></svg></span>
@@ -409,11 +409,11 @@
 
     <section class="shell" aria-label="ClipDock workflow">
       <div class="workflowBand">
-        <div class="workflowStep"><span class="stepNumber">01</span><div><strong>Capture</strong><span>Save quietly while you stay in flow.</span></div></div>
+        <div class="workflowStep"><span class="stepNumber">01</span><div><strong>Collect</strong><span>Capture useful regions while you stay in flow.</span></div></div>
         <span class="workflowArrow" aria-hidden="true">→</span>
-        <div class="workflowStep"><span class="stepNumber">02</span><div><strong>Find</strong><span>Search screenshot text and context locally.</span></div></div>
+        <div class="workflowStep"><span class="stepNumber">02</span><div><strong>Organize and find</strong><span>Keep project context and search screenshot text locally.</span></div></div>
         <span class="workflowArrow" aria-hidden="true">→</span>
-        <div class="workflowStep"><span class="stepNumber">03</span><div><strong>Deliver</strong><span>Reuse, annotate and export consistently.</span></div></div>
+        <div class="workflowStep"><span class="stepNumber">03</span><div><strong>Reuse and deliver</strong><span>Reference, annotate and export consistently.</span></div></div>
       </div>
     </section>
 
@@ -477,6 +477,8 @@
         <p class="sectionLead">Use Windows tools on their own, or add ClipDock when your screenshots become recurring work. Each guide explains the boundary honestly.</p>
       </div>
       <div class="guideGridHome">
+        <a class="guideCardHome" href="/automatically-save-region-screenshots-windows.html"><small>Continuous collection</small><h3>Automatically save region screenshots</h3><p>Compare Windows auto-save with a project-first workflow for capturing multiple references without repeated Save As dialogs.</p><span>Choose the right workflow →</span></a>
+        <a class="guideCardHome" href="/screenshot-organizer-content-creators.html"><small>Creator workflow</small><h3>Organize screenshot research for content</h3><p>Collect visual references by project, recover remembered text, and prepare reusable material for articles and videos.</p><span>Build a creator workflow →</span></a>
         <a class="guideCardHome" href="/search-text-in-screenshots-windows.html"><small>Local OCR</small><h3>Search text inside screenshots</h3><p>Understand how on-device OCR turns remembered words into a path back to the original image.</p><span>Read the OCR guide →</span></a>
         <a class="guideCardHome" href="/how-to-organize-screenshots-on-windows.html"><small>9-step system</small><h3>Organize screenshots on Windows</h3><p>A practical workflow for folders, names, tags, cleanup, exports and recoverable backups.</p><span>Build the workflow →</span></a>
         <a class="guideCardHome" href="/organize-snipping-tool-screenshots.html"><small>Post-capture workflow</small><h3>Organize Snipping Tool captures</h3><p>Keep Win + Shift + S, then give the screenshots worth saving a searchable visual home.</p><span>See the companion workflow →</span></a>

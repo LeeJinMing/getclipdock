@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://getclipdock.com/</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-22</lastmod>
   </url>
   <url>
     <loc>https://getclipdock.com/privacy.html</loc>
@@ -27,5 +27,13 @@
   <url>
     <loc>https://getclipdock.com/scrolling-screenshot-windows.html</loc>
     <lastmod>2026-07-21</lastmod>
+  </url>
+  <url>
+    <loc>https://getclipdock.com/automatically-save-region-screenshots-windows.html</loc>
+    <lastmod>2026-07-22</lastmod>
+  </url>
+  <url>
+    <loc>https://getclipdock.com/screenshot-organizer-content-creators.html</loc>
+    <lastmod>2026-07-22</lastmod>
   </url>
 </urlset>
